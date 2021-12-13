@@ -1,0 +1,312 @@
+{
+  "contractName": "IFaucet",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "addFunds",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "withdrawAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"addFunds\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"withdrawAmount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/IFaucet.sol\":\"IFaucet\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/IFaucet.sol\":{\"keccak256\":\"0x3b585dd7838245d65eaebffd345aa1ff6c3ff06d647d7c862999f7dc39d22a0f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9a4d5cf9ac44c349b8290d87b522f3c9b2e575cc9b6300466134996296a8bdc5\",\"dweb:/ipfs/QmQkE8HTc5TYPwnNnFAi4DXBsSYRLeigK8hWDdxQdy16EX\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\n//they cant inherit from other smart contracts\r\n//can only inherit from other interfaces\r\n//cant declare constructor\r\n//cant declare state variables\r\n//functions must be external\r\n\r\ninterface IFaucet {\r\n\t\tfunction addFunds() payable external;\r\n\t\t\r\n\t\tfunction withdraw(uint256 withdrawAmount) payable external;\r\n}",
+  "sourcePath": "D:\\JX\\coding-projects\\fullstack-bchain\\faucet\\contracts\\IFaucet.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/IFaucet.sol",
+    "exportedSymbols": {
+      "IFaucet": [
+        174
+      ]
+    },
+    "id": 175,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 165,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:32:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IFaucet",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 174,
+        "linearizedBaseContracts": [
+          174
+        ],
+        "name": "IFaucet",
+        "nameLocation": "261:7:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "a26759cb",
+            "id": 168,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addFunds",
+            "nameLocation": "283:8:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 166,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "291:2:1"
+            },
+            "returnParameters": {
+              "id": 167,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "310:0:1"
+            },
+            "scope": 174,
+            "src": "274:37:1",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "2e1a7d4d",
+            "id": 173,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nameLocation": "328:8:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 171,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 170,
+                  "mutability": "mutable",
+                  "name": "withdrawAmount",
+                  "nameLocation": "345:14:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 173,
+                  "src": "337:22:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 169,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "337:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "336:24:1"
+            },
+            "returnParameters": {
+              "id": 172,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "377:0:1"
+            },
+            "scope": 174,
+            "src": "319:59:1",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 175,
+        "src": "251:130:1",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:348:1"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/IFaucet.sol",
+    "exportedSymbols": {
+      "IFaucet": [
+        174
+      ]
+    },
+    "id": 175,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 165,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:32:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IFaucet",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 174,
+        "linearizedBaseContracts": [
+          174
+        ],
+        "name": "IFaucet",
+        "nameLocation": "261:7:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "a26759cb",
+            "id": 168,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addFunds",
+            "nameLocation": "283:8:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 166,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "291:2:1"
+            },
+            "returnParameters": {
+              "id": 167,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "310:0:1"
+            },
+            "scope": 174,
+            "src": "274:37:1",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "2e1a7d4d",
+            "id": 173,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nameLocation": "328:8:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 171,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 170,
+                  "mutability": "mutable",
+                  "name": "withdrawAmount",
+                  "nameLocation": "345:14:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 173,
+                  "src": "337:22:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 169,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "337:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "336:24:1"
+            },
+            "returnParameters": {
+              "id": 172,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "377:0:1"
+            },
+            "scope": 174,
+            "src": "319:59:1",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 175,
+        "src": "251:130:1",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:348:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.10+commit.fc410830.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-12-13T20:27:32.844Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
