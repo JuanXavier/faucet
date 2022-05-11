@@ -141,34 +141,38 @@ function App() {
 						<strong className='black'> {balance} </strong> ETH.
 					</div>
 					{/*---------------------------------------------------------------------*/}
-					<div className='has-text-centered'>
-						<button
-							onClick={addFunds}
-							style={{color: 'black'}}
-							className='button is-info is-focused mr-2 p-5'
-							disabled={!canConnectToContract}>
-							DONATE <br />
-							(0.1 ETH){' '}
-						</button>
-						{/*---------------------------------------------------------------------*/}
-						<button
-							onClick={withdraw}
-							className='button is-success is-focused mr-2 p-5'
-							style={{color: 'black'}}
-							disabled={!canConnectToContract}>
-							WITHDRAW
+					{canConnectToContract ? (
+						<div className='has-text-centered'>
+							<button
+								onClick={addFunds}
+								style={{color: 'black'}}
+								className='button is-info is-focused mr-2 p-5'
+								disabled={!canConnectToContract}>
+								DONATE <br />
+								(0.1 ETH){' '}
+							</button>
+							{/*---------------------------------------------------------------------*/}
+							<button
+								onClick={withdraw}
+								className='button is-success is-focused mr-2 p-5'
+								style={{color: 'black'}}
+								disabled={!canConnectToContract}>
+								WITHDRAW
+								<br />
+								(0.01 ETH){' '}
+							</button>{' '}
 							<br />
-							(0.01 ETH){' '}
-						</button>{' '}
-						<br />
-						<br />
-						{/*---------------------------------------------------------------------*/}
-						{!canConnectToContract && account && (
-							<i className='is-block has-text-centered mb-2'>
-								Please connect to Rinkeby Test Network to interact with faucet.
-							</i>
-						)}
-					</div>
+							<br />
+							{/*---------------------------------------------------------------------*/}
+							{!canConnectToContract && account && (
+								<i className='is-block has-text-centered mb-2'>
+									Please connect to Rinkeby Test Network to interact with faucet.
+								</i>
+							)}
+						</div>
+					) : (
+						<div></div>
+					)}
 				</div>
 			</div>
 		</>
